@@ -17,6 +17,6 @@ Christopher - GUI
 # For Contributers 
 assign youself tasks from the to do list in the Projects tab (Projects->prototype)  
 -------------------
-if you have you get stuck:  
+if you get stuck:  
 1.make an issue  
 2.message on slack
