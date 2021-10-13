@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Project02_BeS.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{F981A120-F28F-4400-9A55-98B150D66801}</UniqueIdentifier>
+      <UniqueIdentifier>{5DC6D212-F3F8-4F8E-B735-3327B63FC763}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project02_BeS.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{886054A5-9873-4C7A-A3F2-3CA027B476E2}</UniqueIdentifier>
+      <UniqueIdentifier>{B7303C86-A761-461A-8901-7EF749CBBAA8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +24,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Project02_BeS">
-      <UniqueIdentifier>{44DC632C-FA23-43BF-ADBE-82262F039B3F}</UniqueIdentifier>
+      <UniqueIdentifier>{24A9ACA4-302B-4367-81C1-24CE4C642C91}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project02_BeS\Project02_BeS.Build.cs">
       <Filter>Source\Project02_BeS</Filter>
