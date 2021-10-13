@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Project2",
+			"Path": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project2/Source/Project2.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Project2Editor",
+			"Path": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project2/Source/Project2Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
