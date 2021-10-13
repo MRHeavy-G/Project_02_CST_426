@@ -13,5 +13,6 @@ UCLASS()
 class PROJECT02_BES_API AProject02_BeSGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+		virtual void StartPlay() override;
 };
