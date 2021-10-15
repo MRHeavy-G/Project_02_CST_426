@@ -13,7 +13,8 @@ APlayerFighterCharacter::APlayerFighterCharacter() {
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
 
-	CameraBoom->TargetArmLength = 300.0f;
+	//CameraBoom->TargetArmLength = 600.0f;
+
 
 	FollowCamera = CreateAbstractDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	 
