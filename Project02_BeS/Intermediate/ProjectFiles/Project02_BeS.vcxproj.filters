@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Project02_BeS.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{5AFED118-CD59-44BF-AC38-5799111BB654}</UniqueIdentifier>
+      <UniqueIdentifier>{42EE8FB0-376F-427C-B0A0-691528271976}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project02_BeS.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{57B255AA-66DE-492C-BD6D-0DA77D934019}</UniqueIdentifier>
+      <UniqueIdentifier>{6180A79B-EB50-4026-A287-0810005B0576}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,9 +23,30 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\Project02_BeS">
-      <UniqueIdentifier>{132DFEE3-8CE1-440F-BF87-76CAA4AB1E0B}</UniqueIdentifier>
+      <UniqueIdentifier>{B7F8F5DD-CB88-4B07-9A40-6753830BACCD}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Project02_BeS\EnemyFighterCharacter.cpp">
+      <Filter>Source\Project02_BeS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project02_BeS\EnemyFighterCharacter.h">
+      <Filter>Source\Project02_BeS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project02_BeS\FighterCharacter.cpp">
+      <Filter>Source\Project02_BeS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project02_BeS\FighterCharacter.h">
+      <Filter>Source\Project02_BeS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Project02_BeS\PlayerFighterCharacter.cpp">
+      <Filter>Source\Project02_BeS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Project02_BeS\PlayerFighterCharacter.h">
+      <Filter>Source\Project02_BeS</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Project02_BeS\Project02_BeS.Build.cs">
       <Filter>Source\Project02_BeS</Filter>
     </None>
