@@ -3,3 +3,7 @@
 
 #include "EnemyFighterCharacter.h"
 
+
+AEnemyFighterCharacter::AEnemyFighterCharacter() {
+	PrimaryActorTick.bCanEverTick = true;
+}

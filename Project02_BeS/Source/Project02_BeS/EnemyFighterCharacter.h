@@ -13,5 +13,6 @@ UCLASS()
 class PROJECT02_BES_API AEnemyFighterCharacter : public AFighterCharacter
 {
 	GENERATED_BODY()
-	
+public:
+	AEnemyFighterCharacter();
 };
