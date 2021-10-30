@@ -8,17 +8,24 @@ APlayerFighterCharacter::APlayerFighterCharacter() {
 
 	PrimaryActorTick.bCanEverTick = true;
 
-	
+	bUseControllerRotationPitch = false;
+	bUseControllerRotationYaw = false;
+	bUseControllerRotationRoll = false;
 
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f);
+	
+ 
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
 
-	//CameraBoom->TargetArmLength = 600.0f;
-
+	CameraBoom->TargetArmLength = 600.0f;
+	CameraBoom->bUsePawnControlRotation = true;
 
 	FollowCamera = CreateAbstractDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	 
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
+
+	FollowCamera->bUsePawnControlRotation = false;
 	
 
 
