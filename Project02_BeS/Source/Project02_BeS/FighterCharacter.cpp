@@ -11,7 +11,8 @@ AFighterCharacter::AFighterCharacter()
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	bDead = false;
-
+	health = 200.0f;
+	punch = 2;//not punching
 }
 
 
@@ -43,6 +44,9 @@ void AFighterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	PlayerInputComponent->BindAxis("MoveRight", this, &AFighterCharacter::MoveRight);
 	PlayerInputComponent->BindAxis("MoveForward",this, &AFighterCharacter::MoveForward);
 
+	PlayerInputComponent->BindAction("Punch",IE_Pressed,this,&AFighterCharacter::Punch);
+	PlayerInputComponent->BindAction("Punch",IE_Released, this, &AFighterCharacter::Punch);
+
 }
 
 void AFighterCharacter::MoveForward(float Axis)
@@ -67,4 +71,15 @@ void AFighterCharacter::MoveRight(float Axis)
 		AddMovementInput(Direction, Axis);
 
 	}
+}
+
+void AFighterCharacter::takeDamage(float damage) {
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Damage Taken"));
+	health -= damage;
+	if (health <= 0)
+		Destroy();
+}
+
+void AFighterCharacter::Punch() {
+	punch = 3 - punch;
 }
