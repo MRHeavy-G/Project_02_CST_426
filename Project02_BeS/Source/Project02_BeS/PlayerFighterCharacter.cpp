@@ -21,7 +21,7 @@ APlayerFighterCharacter::APlayerFighterCharacter() {
 	CameraBoom->TargetArmLength = 600.0f;
 	CameraBoom->bUsePawnControlRotation = true;
 
-	FollowCamera = CreateAbstractDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
+	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	 
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 

@@ -26,7 +26,11 @@ public:
 
 	void MoveForward(float Axis);
 	void MoveRight(float Axis);
+	void Punch();
+	
 	bool bDead;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = State)
+		int punch; // 1 means punching 2 means not punching
 
 
 protected:
@@ -34,12 +38,13 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = Health)
-		float health = 200.0f;
+		float health;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+	UFUNCTION(BlueprintCallable)
+		void takeDamage(float damage);
 };
