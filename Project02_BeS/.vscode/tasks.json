@@ -1,0 +1,720 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Project02_BeS Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Debug",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Debug",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Debug",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"DebugGame",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"DebugGame",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"DebugGame",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Development",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Development",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Development",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Shipping",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Shipping",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS Mac Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Shipping",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Test",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Test",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS Mac Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS Mac Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"Mac",
+				"Test",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Debug",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Debug",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS IOS Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Debug",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"DebugGame",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"DebugGame",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS IOS DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"DebugGame",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Development",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Development",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS IOS Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Development",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Shipping",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Shipping",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS IOS Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Shipping",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Test",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Test",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeS IOS Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeS IOS Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeS",
+				"IOS",
+				"Test",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeSEditor Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeSEditor",
+				"Mac",
+				"Debug",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeSEditor Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeSEditor",
+				"Mac",
+				"Debug",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeSEditor Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeSEditor Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeSEditor",
+				"Mac",
+				"Debug",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeSEditor Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeSEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeSEditor Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeSEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeSEditor Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeSEditor Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeSEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeSEditor Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeSEditor",
+				"Mac",
+				"Development",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeSEditor Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeSEditor",
+				"Mac",
+				"Development",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Project02_BeSEditor Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		},
+		{
+			"label": "Project02_BeSEditor Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"Project02_BeSEditor",
+				"Mac",
+				"Development",
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.27"
+			}
+		}
+	]
+}

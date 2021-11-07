@@ -1,0 +1,57 @@
+[
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/EnemyFighterCharacter.cpp",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/EnemyFighterCharacter.h",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/FighterCharacter.cpp",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/FighterCharacter.h",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/PlayerFighterCharacter.cpp",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/PlayerFighterCharacter.h",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/Project02_BeS.Build.cs",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/Project02_BeS.cpp",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/Project02_BeS.h",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/Project02_BeSGameModeBase.cpp",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	},
+	{
+		"file": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS/Project02_BeSGameModeBase.h",
+		"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ @\"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/.vscode/compileCommands_Project02_BeS/Project02_BeS.191.rsp\"",
+		"directory": "/Users/Shared/Epic Games/UE_4.27/Engine/Source"
+	}
+]
