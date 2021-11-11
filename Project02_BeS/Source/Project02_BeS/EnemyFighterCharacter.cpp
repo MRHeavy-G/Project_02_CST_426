@@ -7,3 +7,10 @@
 AEnemyFighterCharacter::AEnemyFighterCharacter() {
 	PrimaryActorTick.bCanEverTick = true;
 }
+
+void AEnemyFighterCharacter::enableWalking() {
+	walking = true;
+}
+void AEnemyFighterCharacter::disableWalking() {
+	walking = false;
+}
