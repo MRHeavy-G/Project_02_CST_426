@@ -15,4 +15,8 @@ class PROJECT02_BES_API AEnemyFighterCharacter : public AFighterCharacter
 	GENERATED_BODY()
 public:
 	AEnemyFighterCharacter();
+	UFUNCTION(BlueprintCallable)
+		void enableWalking();
+	UFUNCTION(BlueprintCallable)
+		void disableWalking();
 };

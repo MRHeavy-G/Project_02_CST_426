@@ -24,21 +24,35 @@ public:
 	// Sets default values for this character's properties
 	AFighterCharacter();
 
-	void MoveForward(float Axis);
-	void MoveRight(float Axis);
-	void Punch();
-	
-	bool bDead;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = State)
-		int punch; // 1 means punching 2 means not punching
+		bool punching;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = State)
+		int punchCombo;
 
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = State)
+		bool walking = false;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = Health)
 		float health;
+
+	void MoveForward(float Axis);
+	void MoveRight(float Axis);
+	void Punch();
+	void upCombo();
+	FTimerHandle PunchDelayHandle;
+	FTimerHandle DamageDelayHandle;
+	bool canTakeDamage;
+
+	void resetDamage();
+
+	void resetPunch();
+	void setWalkState();
+	bool bDead;
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
