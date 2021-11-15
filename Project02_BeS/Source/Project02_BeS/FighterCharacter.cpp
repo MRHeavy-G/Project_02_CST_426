@@ -89,8 +89,8 @@ void AFighterCharacter::MoveRight(float Axis)
 void AFighterCharacter::takeDamage(float damage) {
 
 	if (canTakeDamage) {
-		//canTakeDamage = false;
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Damage Taken"));
+		canTakeDamage = false;
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Damage Taken"));
 		health -= damage;
 		GetWorld()->GetTimerManager().SetTimer(DamageDelayHandle, this, &AFighterCharacter::resetDamage, .25, false);
 	}

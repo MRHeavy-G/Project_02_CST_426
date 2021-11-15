@@ -4,15 +4,19 @@
 
 #include "CoreMinimal.h"
 #include "FighterCharacter.h"
+
 #include "EnemyFighterCharacter.generated.h"
 
 /**
  * 
  */
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FZombieDeath);
 UCLASS()
 class PROJECT02_BES_API AEnemyFighterCharacter : public AFighterCharacter
 {
 	GENERATED_BODY()
+
 public:
 	AEnemyFighterCharacter();
 	UFUNCTION(BlueprintCallable)
@@ -25,5 +29,12 @@ public:
 		void endAttack();
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = State)
 		bool attack;
+
 	virtual void handleDeath();
+
+
+	UPROPERTY(BlueprintAssignable, Category = "EventsDelegates")
+		FZombieDeath OnDeath;
+
+
 };
