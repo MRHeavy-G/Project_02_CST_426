@@ -19,4 +19,11 @@ public:
 		void enableWalking();
 	UFUNCTION(BlueprintCallable)
 		void disableWalking();
+	UFUNCTION(BlueprintCallable)
+		void startAttack();
+	UFUNCTION(BlueprintCallable)
+		void endAttack();
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = State)
+		bool attack;
+	virtual void handleDeath();
 };

@@ -6,6 +6,7 @@
 
 AEnemyFighterCharacter::AEnemyFighterCharacter() {
 	PrimaryActorTick.bCanEverTick = true;
+	attack = false;
 }
 
 void AEnemyFighterCharacter::enableWalking() {
@@ -13,4 +14,13 @@ void AEnemyFighterCharacter::enableWalking() {
 }
 void AEnemyFighterCharacter::disableWalking() {
 	walking = false;
+}
+void AEnemyFighterCharacter::startAttack() {
+	attack = true;
+}
+void AEnemyFighterCharacter::endAttack() {
+	attack = false;
+}
+void AEnemyFighterCharacter::handleDeath() {
+	Destroy();
 }

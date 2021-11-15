@@ -37,7 +37,7 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = Health)
 		float health;
-
+	virtual void handleDeath();
 	void MoveForward(float Axis);
 	void MoveRight(float Axis);
 	void Punch();
