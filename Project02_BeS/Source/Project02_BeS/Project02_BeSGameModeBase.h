@@ -21,18 +21,27 @@ class PROJECT02_BES_API AProject02_BeSGameModeBase : public AGameModeBase
 		virtual void StartPlay() override;
 
 private:
+
+	FVector spawnA;
+	FVector spawnB;
+	FVector spawnC;
+	FRotator spawnRotation;
 	UPROPERTY(EditAnywhere, category = ThingsToSpawn)
 		TSubclassOf<class AEnemyFighterCharacter> enemyBP;
 
 	TArray<AEnemyFighterCharacter*> horde;
-	void spawnHorde();
+	void spawn(int count);
+	UFUNCTION()
+	void spawnWave(int count, int waves);
+	FTimerHandle waveHandle;
+	int targetScore;
+	int enemiesAlive;
+
 	UPROPERTY(VisibleAnywhere)
 	int playerScore;
-	FScriptDelegate zombieDelegate;
+	
 	UFUNCTION()
 	void updateScore();
 
-protected:
-	UPROPERTY(EditAnywhere, category = Horde)
-		int hordeSize =1;
+
 };

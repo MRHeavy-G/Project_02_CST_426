@@ -27,4 +27,6 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 		UCameraComponent* FollowCamera;
+protected:
+	virtual void handleDeath();
 };

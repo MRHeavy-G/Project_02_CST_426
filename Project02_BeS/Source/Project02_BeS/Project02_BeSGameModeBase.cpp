@@ -7,38 +7,108 @@ void AProject02_BeSGameModeBase::StartPlay()
 {
 	Super::StartPlay();
 
-	check(GEngine != nullptr);
+	spawnA = FVector(-2273.0, -3413.0, 0.0);
+	spawnB = FVector(-1800.0, -3413.0, 0.0);
+	spawnC = FVector(-600.0, -3413.0, 0.0);
+	spawnRotation = FRotator(0, 1, 0);
+	enemiesAlive = 0;
 
-	// Display a debug message for five seconds. 
-	// The -1 "Key" value argument prevents the message from being updated or refreshed.
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Project2 Gamemode Loaded!"));
-
-	zombieDelegate.BindUFunction(this, "updateScore");
+	targetScore = 0;
 	playerScore = 0;
-	spawnHorde();
+	spawn(1);
+	
 	
 }
 void AProject02_BeSGameModeBase::updateScore() {
 	playerScore++;
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, FString::Printf(TEXT("Score: %d"),playerScore ));
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, FString::Printf(TEXT("Score: %d"), playerScore ));
+	if (playerScore == 1) {
+		spawnWave(1, 2); 
+		
+	}
+	else if (playerScore == 3) {
+		spawn(2);
+		
+	}
+	else if (playerScore == 5) {
+		spawnWave(2, 2);
+	}
+	else if (playerScore == 9) {
+		spawnWave(1, 5);
+		targetScore = playerScore + 5;
+	}
+	else if (playerScore == targetScore) {
+		int count = FMath::Rand() % 3 + 1;
+		int waves = FMath::Rand() % 5 + 1;
+		targetScore += (count * waves);
+		spawnWave(count, waves);
+	}
 	
 }
-void AProject02_BeSGameModeBase::spawnHorde() {
+void AProject02_BeSGameModeBase::spawnWave(int count,int waves) {
+	if (waves == 0) return;
+	spawn(count);
+	waves--;
+	
+	if(waves){
+		FTimerDelegate del;
+		del.BindUFunction(this, FName("spawnWave"), count, waves);
+		GetWorld()->GetTimerManager().SetTimer(waveHandle, del, 3, false);
+	}
+	else {
+		GetWorldTimerManager().ClearTimer(waveHandle);
+	}
 
+
+}
+
+void AProject02_BeSGameModeBase::spawn(int count) {
+	if (count > 3) count = 3; //dont allow more than 3 since only 3 spawns
 	if (enemyBP) {
-		FVector spawnLocation(0, 0, 100);
-		FRotator spawnRotation(0, 0, 0);
+		
 		const FActorSpawnParameters spawnParams;
-
-		for (int i = 0; i < hordeSize; i++) {
-			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnLocation, spawnRotation, spawnParams) );
-			horde[i]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
-			int x = FMath::RandRange(-100, 200);
-			int y = FMath::RandRange(-100, 200);
-			spawnLocation += FVector(x, y, 0);
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Spawned Enemy"));
+		if (count == 1) {
+			int loc = (FMath::Rand() % 3) + 1;
+			if (loc == 1) {
+				horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnA, spawnRotation, spawnParams));
+			}
+			else if (loc == 2) {
+				horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnB, spawnRotation, spawnParams));
+			}
+			else {
+				horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnC, spawnRotation, spawnParams));
+			}
+			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
+			enemiesAlive++;
 
 		}
+		else if (count == 2) {
+			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnA, spawnRotation, spawnParams));
+			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
+			enemiesAlive++;
+			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnC, spawnRotation, spawnParams));
+			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
+			enemiesAlive++;
+
+			
+		}
+		else {
+			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnA, spawnRotation, spawnParams));
+			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
+			enemiesAlive++;
+			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnB, spawnRotation, spawnParams));
+			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
+			enemiesAlive++;
+			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnC, spawnRotation, spawnParams));
+			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
+			enemiesAlive++;
+
+		
+		}
+		
+			
+
 	}
 
 }
