@@ -51,7 +51,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F2A974DB-86F6-441F-9944-7687AEB923E3}</ProjectGuid>
+    <ProjectGuid>{BE36D788-5F57-4742-8B2B-DA5451AAE6E1}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>Project02_BeS</RootNamespace>
     <PlatformToolset>v142</PlatformToolset>
@@ -287,6 +287,7 @@
     <None Include="..\..\Project02_BeS.uproject"/>
     <None Include="..\..\Source\Project02_BeS.Target.cs"/>
     <None Include="..\..\Source\Project02_BeSEditor.Target.cs"/>
+    <None Include="..\..\.ignore"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>

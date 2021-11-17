@@ -11,7 +11,11 @@ AFighterCharacter::AFighterCharacter()
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	bDead = false;
-
+	canTakeDamage = true;
+	health = 200.0f;
+	punching = false;
+	punchCombo = 0;
+	walking = false;
 }
 
 
@@ -20,11 +24,6 @@ void AFighterCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	check(GEngine != nullptr);
-
-	// Display a debug message for five seconds. 
-	// The -1 "Key" value argument prevents the message from being updated or refreshed.
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("We are using FighterCharacter."));
 	
 }
 
@@ -43,11 +42,19 @@ void AFighterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	PlayerInputComponent->BindAxis("MoveRight", this, &AFighterCharacter::MoveRight);
 	PlayerInputComponent->BindAxis("MoveForward",this, &AFighterCharacter::MoveForward);
 
-}
+	PlayerInputComponent->BindAction("Punch",IE_Pressed,this,&AFighterCharacter::Punch);
 
+	PlayerInputComponent->BindAction("Punch", IE_Pressed, this, &AFighterCharacter::upCombo);
+	PlayerInputComponent->BindAction("MOVING", IE_Released, this, &AFighterCharacter::setWalkState);
+}
+void AFighterCharacter::setWalkState() {
+	walking = false;
+}
 void AFighterCharacter::MoveForward(float Axis)
 {
-	if (!bDead) {
+	
+	if (!bDead &&Axis ) {
+		walking = true;
 		const FRotator Rotation = Controller->GetControlRotation();
 		const FRotator YawRotation(0, Rotation.Yaw, 0);
 
@@ -55,11 +62,15 @@ void AFighterCharacter::MoveForward(float Axis)
 		AddMovementInput(Direction, Axis);
 
 	}
+
 }
 
 void AFighterCharacter::MoveRight(float Axis)
 {
-	if (!bDead) {
+	
+	if (!bDead &&Axis) {
+
+		walking = true;
 		const FRotator Rotation = Controller->GetControlRotation();
 		const FRotator YawRotation(0, Rotation.Yaw, 0);
 
@@ -67,4 +78,40 @@ void AFighterCharacter::MoveRight(float Axis)
 		AddMovementInput(Direction, Axis);
 
 	}
+
+}
+
+void AFighterCharacter::takeDamage(float damage) {
+
+	if (canTakeDamage) {
+		canTakeDamage = false;
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Damage Taken"));
+		health -= damage;
+		GetWorld()->GetTimerManager().SetTimer(DamageDelayHandle, this, &AFighterCharacter::resetDamage, .25, false);
+	}
+	if (health <= 0)
+		bDead = true;
+	if (bDead) handleDeath();
+}
+void AFighterCharacter::handleDeath() {
+
+}
+void AFighterCharacter::resetDamage() {
+	canTakeDamage = true;
+	GetWorldTimerManager().ClearTimer(DamageDelayHandle);
+}
+void AFighterCharacter::Punch() {
+	if (!punching) {
+		punching = true;
+
+		GetWorld()->GetTimerManager().SetTimer(PunchDelayHandle, this, &AFighterCharacter::resetPunch, .50, false);
+	}
+}
+void AFighterCharacter::upCombo() {
+	if(punching)punchCombo++;
+}
+void AFighterCharacter::resetPunch() {
+	punching = false;
+	punchCombo = 0;
+	GetWorldTimerManager().ClearTimer(PunchDelayHandle);
 }

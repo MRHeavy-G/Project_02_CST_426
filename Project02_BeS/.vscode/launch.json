@@ -1,0 +1,104 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Project02_BeS (Debug)",
+			"request": "launch",
+			"preLaunchTask": "Project02_BeS Mac Debug Build",
+			"program": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Binaries/Mac/UE4-Mac-Debug.app/Contents/MacOS/UE4-Mac-Debug",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.27",
+			"type": "lldb"
+		},
+		{
+			"name": "Project02_BeS (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "Project02_BeS Mac DebugGame Build",
+			"program": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Binaries/Mac/UE4-Mac-DebugGame.app/Contents/MacOS/UE4-Mac-DebugGame",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.27",
+			"type": "lldb"
+		},
+		{
+			"name": "Project02_BeS (Development)",
+			"request": "launch",
+			"preLaunchTask": "Project02_BeS Mac Development Build",
+			"program": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Binaries/Mac/UE4.app/Contents/MacOS/UE4",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.27",
+			"type": "lldb"
+		},
+		{
+			"name": "Project02_BeS (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "Project02_BeS Mac Shipping Build",
+			"program": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Binaries/Mac/UE4-Mac-Shipping.app/Contents/MacOS/UE4-Mac-Shipping",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.27",
+			"type": "lldb"
+		},
+		{
+			"name": "Project02_BeS (Test)",
+			"request": "launch",
+			"preLaunchTask": "Project02_BeS Mac Test Build",
+			"program": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Binaries/Mac/UE4-Mac-Test.app/Contents/MacOS/UE4-Mac-Test",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.27",
+			"type": "lldb"
+		},
+		{
+			"name": "Project02_BeSEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "Project02_BeSEditor Mac Debug Build",
+			"program": "/Users/Shared/Epic Games/UE_4.27/Engine/Binaries/Mac/UE4Editor-Mac-Debug.app/Contents/MacOS/UE4Editor-Mac-Debug",
+			"args": [
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject"
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.27",
+			"type": "lldb"
+		},
+		{
+			"name": "Project02_BeSEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "Project02_BeSEditor Mac DebugGame Build",
+			"program": "/Users/Shared/Epic Games/UE_4.27/Engine/Binaries/Mac/UE4Editor-Mac-DebugGame.app/Contents/MacOS/UE4Editor-Mac-DebugGame",
+			"args": [
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject"
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.27",
+			"type": "lldb"
+		},
+		{
+			"name": "Project02_BeSEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "Project02_BeSEditor Mac Development Build",
+			"program": "/Users/Shared/Epic Games/UE_4.27/Engine/Binaries/Mac/UE4Editor.app/Contents/MacOS/UE4Editor",
+			"args": [
+				"/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject"
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.27",
+			"type": "lldb"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "mono",
+			"request": "launch",
+			"program": "/Users/Shared/Epic Games/UE_4.27/Engine/Binaries/DotNET/UnrealBuildTool.exe",
+			"console": "internalConsole",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Project02_BeS.uproject",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "/Users/Shared/Epic Games/UE_4.27"
+		}
+	]
+}
