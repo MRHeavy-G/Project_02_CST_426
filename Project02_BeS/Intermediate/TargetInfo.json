@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "Project02_BeS",
-			"Path": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeS.Target.cs",
+			"Path": "C:\\Users\\raul\\Desktop\\Project_02_CST_426\\Project02_BeS\\Source\\Project02_BeS.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "Project02_BeSEditor",
-			"Path": "/Users/home/Desktop/Fall 21/426/Project_02_CST_426/Project02_BeS/Source/Project02_BeSEditor.Target.cs",
+			"Path": "C:\\Users\\raul\\Desktop\\Project_02_CST_426\\Project02_BeS\\Source\\Project02_BeSEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

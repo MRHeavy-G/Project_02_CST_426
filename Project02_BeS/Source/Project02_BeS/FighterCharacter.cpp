@@ -24,11 +24,6 @@ void AFighterCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	check(GEngine != nullptr);
-
-	// Display a debug message for five seconds. 
-	// The -1 "Key" value argument prevents the message from being updated or refreshed.
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("We are using FighterCharacter."));
 	
 }
 
@@ -89,13 +84,17 @@ void AFighterCharacter::MoveRight(float Axis)
 void AFighterCharacter::takeDamage(float damage) {
 
 	if (canTakeDamage) {
-		//canTakeDamage = false;
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Damage Taken"));
+		canTakeDamage = false;
+		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Damage Taken"));
 		health -= damage;
-		//GetWorld()->GetTimerManager().SetTimer(DamageDelayHandle, this, &AFighterCharacter::resetDamage, .25, false);
+		GetWorld()->GetTimerManager().SetTimer(DamageDelayHandle, this, &AFighterCharacter::resetDamage, .25, false);
 	}
 	if (health <= 0)
-		Destroy();
+		bDead = true;
+	if (bDead) handleDeath();
+}
+void AFighterCharacter::handleDeath() {
+
 }
 void AFighterCharacter::resetDamage() {
 	canTakeDamage = true;
