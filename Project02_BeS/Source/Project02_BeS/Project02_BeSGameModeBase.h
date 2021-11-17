@@ -42,12 +42,12 @@ private:
 	int targetScore;
 	int enemiesAlive;
 
-	UPROPERTY(VisibleAnywhere)
-	int playerScore;
 	
 	UFUNCTION()
 	void updateScore(int index);
 public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		int playerScore;
 	UFUNCTION(BlueprintCallable)
 	void build();
 
