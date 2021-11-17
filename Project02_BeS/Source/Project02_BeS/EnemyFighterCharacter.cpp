@@ -22,7 +22,10 @@ void AEnemyFighterCharacter::endAttack() {
 	attack = false;
 }
 void AEnemyFighterCharacter::handleDeath() {
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Damage Taken"));
-	OnDeath.Broadcast();
-	Destroy();
+	
+	
+	OnDeath.Broadcast(index);
+}
+void AEnemyFighterCharacter::setIndex(int idNum) {
+	index = idNum;
 }

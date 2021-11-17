@@ -26,7 +26,7 @@ APlayerFighterCharacter::APlayerFighterCharacter() {
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 
 	FollowCamera->bUsePawnControlRotation = false;
-
+	bDead = false;
 
 
 }

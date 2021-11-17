@@ -22,15 +22,18 @@ class PROJECT02_BES_API AProject02_BeSGameModeBase : public AGameModeBase
 
 private:
 
-	FVector spawnA;
-	FVector spawnB;
-	FVector spawnC;
+	FVector locaA;
+	FVector locaB;
+	FVector locaC;
+	FVector spawnOutLoc;
 	FRotator spawnRotation;
 	UPROPERTY(EditAnywhere, category = ThingsToSpawn)
 		TSubclassOf<class AEnemyFighterCharacter> enemyBP;
 
 	TArray<AEnemyFighterCharacter*> horde;
-	void spawn(int count);
+	void spawnIn(FVector location);
+
+	void spawnOut(int index);
 	UFUNCTION()
 	void spawnWave(int count, int waves);
 	FTimerHandle waveHandle;
@@ -41,7 +44,7 @@ private:
 	int playerScore;
 	
 	UFUNCTION()
-	void updateScore();
+	void updateScore(int index);
 
 
 };

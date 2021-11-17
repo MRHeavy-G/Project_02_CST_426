@@ -30,7 +30,9 @@ public:
 		int punchCombo;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = State)
-		bool walking = false;
+		bool walking;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, category = State)
+		bool bDead;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -50,7 +52,7 @@ protected:
 
 	void resetPunch();
 	void setWalkState();
-	bool bDead;
+
 
 
 public:	
@@ -61,4 +63,6 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	UFUNCTION(BlueprintCallable)
 		void takeDamage(float damage);
+
+	void resetHealth();
 };

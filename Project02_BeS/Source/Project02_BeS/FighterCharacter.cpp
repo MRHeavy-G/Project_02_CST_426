@@ -17,7 +17,9 @@ AFighterCharacter::AFighterCharacter()
 	punchCombo = 0;
 	walking = false;
 }
-
+void AFighterCharacter::resetHealth() {
+	health = 200.0f;
+}
 
 // Called when the game starts or when spawned
 void AFighterCharacter::BeginPlay()
@@ -85,16 +87,17 @@ void AFighterCharacter::takeDamage(float damage) {
 
 	if (canTakeDamage) {
 		canTakeDamage = false;
-		//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Damage Taken"));
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Damage Taken"));
 		health -= damage;
 		GetWorld()->GetTimerManager().SetTimer(DamageDelayHandle, this, &AFighterCharacter::resetDamage, .25, false);
 	}
-	if (health <= 0)
+	if (health <= 0) {
 		bDead = true;
-	if (bDead) handleDeath();
+		handleDeath();
+	}
 }
 void AFighterCharacter::handleDeath() {
-
+	
 }
 void AFighterCharacter::resetDamage() {
 	canTakeDamage = true;

@@ -11,7 +11,8 @@
  * 
  */
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FZombieDeath);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FZombieDeath, int, index);
+
 UCLASS()
 class PROJECT02_BES_API AEnemyFighterCharacter : public AFighterCharacter
 {
@@ -31,6 +32,9 @@ public:
 		bool attack;
 
 	virtual void handleDeath();
+
+	int index;
+	void setIndex(int idNum);
 
 
 	UPROPERTY(BlueprintAssignable, Category = "EventsDelegates")

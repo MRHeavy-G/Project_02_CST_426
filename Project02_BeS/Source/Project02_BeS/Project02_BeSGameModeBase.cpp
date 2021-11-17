@@ -2,53 +2,62 @@
 
 
 #include "Project02_BeSGameModeBase.h"
-
+#include "Runtime/Engine/Classes/Engine/World.h"
 void AProject02_BeSGameModeBase::StartPlay()
 {
 	Super::StartPlay();
-
-	spawnA = FVector(-2273.0, -3413.0, 0.0);
-	spawnB = FVector(-1800.0, -3413.0, 0.0);
-	spawnC = FVector(-600.0, -3413.0, 0.0);
+	 FActorSpawnParameters spawnParams;
+	spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+	locaA = FVector(-500.0, -640.0, 100.0);
+	locaB = FVector(0.0, -640.0, 100.0);
+	locaC = FVector(500.0, -640.0, 100.0);
+	spawnOutLoc = FVector(0, 0, -1000);
 	spawnRotation = FRotator(0, 1, 0);
 	enemiesAlive = 0;
 
 	targetScore = 0;
 	playerScore = 0;
-	spawn(1);
-	
+	if (enemyBP) {
+		//Create 20 Zombies
+		for (int i = 0; i < 20; i++) {
+			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnOutLoc, spawnRotation, spawnParams));
+			horde[i]->bDead = true;
+			horde[i]->setIndex(i);
+			horde[i]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
+		}
+	}
+	spawnWave(1,1);
 	
 }
-void AProject02_BeSGameModeBase::updateScore() {
+void AProject02_BeSGameModeBase::updateScore(int index) {
 	playerScore++;
-
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, FString::Printf(TEXT("Score: %d"), playerScore ));
+	spawnOut(index);
+	
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, FString::Printf(TEXT("Score: %d"), enemiesAlive ));
 	if (playerScore == 1) {
-		spawnWave(1, 2); 
-		
+		spawnIn(locaA);
+		spawnIn(locaC);
 	}
 	else if (playerScore == 3) {
-		spawn(2);
-		
+		spawnWave(1, 3);
+		targetScore = playerScore * 3;
 	}
-	else if (playerScore == 5) {
-		spawnWave(2, 2);
-	}
-	else if (playerScore == 9) {
-		spawnWave(1, 5);
-		targetScore = playerScore + 5;
-	}
-	else if (playerScore == targetScore) {
-		int count = FMath::Rand() % 3 + 1;
+	else if(playerScore == targetScore) {
+		int count = FMath::Rand() % 4 + 1;
 		int waves = FMath::Rand() % 5 + 1;
-		targetScore += (count * waves);
 		spawnWave(count, waves);
 	}
 	
+	
 }
-void AProject02_BeSGameModeBase::spawnWave(int count,int waves) {
+void AProject02_BeSGameModeBase::spawnWave(int count, int waves) {
 	if (waves == 0) return;
-	spawn(count);
+	for (int i = 0; i < count; i++) {
+		int loc = FMath::Rand() % 3 + 1;
+		if (loc == 1) spawnIn(locaA);
+		if (loc == 2) spawnIn(locaB);
+		if (loc == 3) spawnIn(locaC);
+	}
 	waves--;
 	
 	if(waves){
@@ -63,52 +72,18 @@ void AProject02_BeSGameModeBase::spawnWave(int count,int waves) {
 
 }
 
-void AProject02_BeSGameModeBase::spawn(int count) {
-	if (count > 3) count = 3; //dont allow more than 3 since only 3 spawns
-	if (enemyBP) {
-		
-		const FActorSpawnParameters spawnParams;
-		if (count == 1) {
-			int loc = (FMath::Rand() % 3) + 1;
-			if (loc == 1) {
-				horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnA, spawnRotation, spawnParams));
-			}
-			else if (loc == 2) {
-				horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnB, spawnRotation, spawnParams));
-			}
-			else {
-				horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnC, spawnRotation, spawnParams));
-			}
-			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
-			enemiesAlive++;
+void AProject02_BeSGameModeBase::spawnIn(FVector newLocation) {
+	if (enemiesAlive < 0 || enemiesAlive > 19) return;
+	horde[enemiesAlive]->SetActorLocationAndRotation(newLocation, spawnRotation, false, nullptr,ETeleportType::TeleportPhysics);
+	horde[enemiesAlive]->bDead = false;
 
-		}
-		else if (count == 2) {
-			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnA, spawnRotation, spawnParams));
-			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
-			enemiesAlive++;
-			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnC, spawnRotation, spawnParams));
-			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
-			enemiesAlive++;
+	enemiesAlive++;
+}
+void AProject02_BeSGameModeBase::spawnOut(int index) {
+	if (index < 0 || index > 19) return;
+	horde[index]->SetActorLocationAndRotation(spawnOutLoc, spawnRotation, false, nullptr, ETeleportType::TeleportPhysics);
+	horde[index]->bDead = true;
+	horde[index]->resetHealth();
 
-			
-		}
-		else {
-			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnA, spawnRotation, spawnParams));
-			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
-			enemiesAlive++;
-			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnB, spawnRotation, spawnParams));
-			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
-			enemiesAlive++;
-			horde.Push(GetWorld()->SpawnActor<AEnemyFighterCharacter>(enemyBP, spawnC, spawnRotation, spawnParams));
-			horde[enemiesAlive]->OnDeath.AddDynamic(this, &AProject02_BeSGameModeBase::updateScore);
-			enemiesAlive++;
-
-		
-		}
-		
-			
-
-	}
-
+	enemiesAlive--;
 }
