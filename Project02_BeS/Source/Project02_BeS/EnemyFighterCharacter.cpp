@@ -6,6 +6,8 @@
 
 AEnemyFighterCharacter::AEnemyFighterCharacter() {
 	PrimaryActorTick.bCanEverTick = true;
+
+	GetCharacterMovement()->MaxWalkSpeed = FMath::RandRange(400, 800);
 	attack = false;
 }
 

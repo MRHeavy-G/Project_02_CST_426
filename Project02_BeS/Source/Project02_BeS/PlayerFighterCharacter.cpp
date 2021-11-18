@@ -14,6 +14,8 @@ APlayerFighterCharacter::APlayerFighterCharacter() {
 
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f);
 
+	GetCharacterMovement()->MaxWalkSpeed = 1000;
+
 
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
@@ -31,5 +33,5 @@ APlayerFighterCharacter::APlayerFighterCharacter() {
 
 }
 void APlayerFighterCharacter::handleDeath() {
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString::Printf(TEXT("GAME OVER!!!")));
+	
 }
