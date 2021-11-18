@@ -11,7 +11,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 
-#include "Blueprint/UserWidget.h"
+//#include "Blueprint/UserWidget.h"
 
 #include "FighterCharacter.generated.h"
 

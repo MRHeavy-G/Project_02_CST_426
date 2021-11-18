@@ -288,6 +288,7 @@
     <None Include="..\..\Source\Project02_BeS.Target.cs"/>
     <None Include="..\..\Source\Project02_BeSEditor.Target.cs"/>
     <None Include="..\..\.ignore"/>
+    <None Include="..\..\Project02_BeS.png"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>

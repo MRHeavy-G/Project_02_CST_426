@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Project02_BeS.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{2DE2C6E2-4FDE-44AF-B818-5871B1675CAD}</UniqueIdentifier>
+      <UniqueIdentifier>{D9DAEC74-E5F1-458C-BC5F-0BA0E345F7DE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Project02_BeS.Target.cs">
       <Filter>Source</Filter>
@@ -12,8 +12,9 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.ignore" />
+    <None Include="..\..\Project02_BeS.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{F2B36DB1-F3F2-4B6D-8284-24BD6C9F3AC8}</UniqueIdentifier>
+      <UniqueIdentifier>{98F00BF7-F77F-4A43-A89E-E4781F34CDA6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -28,7 +29,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Project02_BeS">
-      <UniqueIdentifier>{6BE50E87-7D5D-4E92-9204-D7A12D19DA80}</UniqueIdentifier>
+      <UniqueIdentifier>{F2D79E44-0111-445B-8E0E-47397CFC1E80}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Project02_BeS\EnemyFighterCharacter.cpp">
       <Filter>Source\Project02_BeS</Filter>
