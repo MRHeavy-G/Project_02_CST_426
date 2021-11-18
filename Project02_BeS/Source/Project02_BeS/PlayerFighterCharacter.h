@@ -22,7 +22,7 @@ class PROJECT02_BES_API APlayerFighterCharacter : public AFighterCharacter
 public:
 	APlayerFighterCharacter();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+	UPROPERTY(EditAnywhere, Category = Camera)
 		USpringArmComponent* CameraBoom;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
