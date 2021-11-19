@@ -287,19 +287,20 @@
 		{
 			"ShaderMapHash": "2A9129CE7C04CC614802EB437CACB0CCD390F4A4",
 			"Assets": [
-				"/Engine/BasicShapes/M_Cylinder_M_Metal_Steel_DA045CD94F8FA8279D85A8ADF8222ABD",
-				"/Engine/BasicShapes/M_Cylinder_M_Metal_Steel_9244334B4534A9F5E068F8A2490A4286",
-				"/Engine/BasicShapes/M_Cylinder_M_Metal_Steel_27316F184BED542454194AB8208765BC",
-				"/Engine/BasicShapes/M_Cylinder_M_Metal_Steel_2309CA4F428AED6ABFB616A21F929978",
-				"/Engine/BasicShapes/M_Cylinder_M_Metal_Steel_1036D37F4686D30D4610D3A4A1FA3C9D",
-				"/Engine/BasicShapes/M_Cube_M_Metal_Gold_7E7F04DE4250DE3675DC31AC43B6D9FC",
-				"/Engine/BasicShapes/M_Cube_M_Metal_Gold_24C5C09D41535635CA59219C0AD97FD3",
-				"/Engine/BasicShapes/M_Cube_M_Metal_Gold_1AB46A5645A040749CDF8897979E522C",
-				"/Engine/BasicShapes/M_Cube_M_Metal_Gold_110634C9407EF5E99DEC3CA0EA262E1D",
-				"/Engine/BasicShapes/M_Cube_M_M_Cube_M_Tech_Hex_Tile_Pulse_AA4538474773A61D823A55A6874AE1F1_636402B44B06D52A695A54A246D90E58",
-				"/Engine/BasicShapes/M_Cube_M_M_Cube_M_Tech_Hex_Tile_Pulse_7F6C7C5A433BF6F618DCE5BE870A9327_1D7D3ED34FE41664B1F7FCB8ECD850DD",
-				"/Engine/BasicShapes/M_Cube_M_M_Cube_M_Tech_Hex_Tile_Pulse_084F2AE04CBE91C98FBEC98A36C246A5_F0D75FB24DEB1144AABB9B9A7A747E6B",
-				"/Engine/BasicShapes/M_Cylinder_M_Metal_Steel_B2A71E6940C71648C886A689BB0B40DD"
+				"/Engine/BasicShapes/M_Cylinder_M_Metal_Burnished_Steel_C86B8E3C4DBEB3F05E3C1898D985BD51",
+				"/Engine/BasicShapes/M_Cylinder_M_Metal_Burnished_Steel_B3A1DA924073F26D4F57CFB9ED97B8FE",
+				"/Engine/BasicShapes/M_Cylinder_M_Metal_Burnished_Steel_A5136971491E86505FD96DAFE0FEF2E9",
+				"/Engine/BasicShapes/M_Cylinder_M_Metal_Burnished_Steel_63FABBBF479492119B7085B7E51653B9",
+				"/Engine/BasicShapes/M_Cylinder_M_Metal_Burnished_Steel_36CE6CE64DA8066EB9846AB499A54F87",
+				"/Engine/BasicShapes/M_Cylinder_M_Metal_Burnished_Steel_338BAADB476265856CAD3CBCE5889691",
+				"/Engine/BasicShapes/M_Cube_M_Tech_Hex_Tile_EFA0768E41A760A37939BF96854763AB",
+				"/Engine/BasicShapes/M_Cube_M_Tech_Hex_Tile_7B36DE60444EE8800E65F3B3A44350AD",
+				"/Engine/BasicShapes/M_Cube_M_Tech_Hex_Tile_022B3BEF43FB0606F86746A7EBFDA4D2",
+				"/Engine/BasicShapes/M_Cube_M_Metal_Gold_A99041234B061C17AD6F8EA7DEC05B06",
+				"/Engine/BasicShapes/M_Cube_M_Metal_Gold_A3460C9641A4AD4F03FF11AFE1A940F3",
+				"/Engine/BasicShapes/M_Cube_M_Metal_Gold_78E27FC941CE7BF5E8FF7FBEBD62DA7C",
+				"/Engine/BasicShapes/M_Cube_M_Metal_Gold_6D90F03B4B0AF8FCE2872BA33B412F94",
+				"/Engine/BasicShapes/M_Cube_M_M_Cube_M_Concrete_Tiles_9A46A63F450606C33CC59BB059C91E80_091CB5AC42A8D67DA2009BBCC1FA1E4D"
 			]
 		},
 		{
@@ -309,7 +310,7 @@
 			]
 		},
 		{
-			"ShaderMapHash": "468F75DEEDBA53C030ED11CA1145352D9380C863",
+			"ShaderMapHash": "8D5C9971654E22D92212E61C55D92EEA6D6F673A",
 			"Assets": [
 				"/Engine/BasicShapes/BasicShapeMaterial"
 			]
@@ -324,6 +325,24 @@
 			"ShaderMapHash": "5532C31F2D3986334CDEFCBF4E1201FB6D4D6B00",
 			"Assets": [
 				"/Engine/EngineDebugMaterials/DebugEditorMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "FD7D31E0890B4F94C66E2ECB560844C8CDDE64D3",
+			"Assets": [
+				"/Game/Materials/Floor"
+			]
+		},
+		{
+			"ShaderMapHash": "84EE68E198E29A72CBE2C582E32C97814CE8C202",
+			"Assets": [
+				"/Game/Materials/Concrete"
+			]
+		},
+		{
+			"ShaderMapHash": "BA5DA19E865A82A035348D7AE91AEDCE7D77E6AF",
+			"Assets": [
+				"/Game/Materials/RedSeat"
 			]
 		},
 		{
@@ -654,6 +673,12 @@
 			"ShaderMapHash": "CBE1B9A36802EF5FE309B1F94BBC5001044B3DF3",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_AssetPlatform"
+			]
+		},
+		{
+			"ShaderMapHash": "0F6D03C2310A21A09587819B546743E10EBA2D9D",
+			"Assets": [
+				"/Game/Materials/MetalPole"
 			]
 		},
 		{
