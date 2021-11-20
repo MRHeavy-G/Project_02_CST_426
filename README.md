@@ -15,6 +15,10 @@ timer and in order to add time they need to beat up an enemy.
 - Step 5: you can play in the editor or make a build 
 - Step 6: have fun
 
+# Controls 
+- Standards wasd for movement 
+- mouse for rotatating left and right 
+- left mouse click for punching 
 
 
 
